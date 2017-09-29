@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VASHI Brand Film Scroller</title>
+	<link rel="stylesheet" href="style.css">
+
+	 <script language="javascript">
+
+    function _politeLoad(urls, onComplete) {
+        var l = urls.length,
+            loaded = 0,
+            checkProgress = function() {
+                if (++loaded === l && onComplete) {
+                    onComplete();
+                }
+            },
+            i;
+        for (i = 0; i < l; i++) {
+            _loadScript(urls[i], checkProgress);
+        }
+    }
+
+    function _loadScript(url, callback){
+
+        var script = document.createElement("script")
+        script.type = "text/javascript";
+
+        if (script.readyState){  //IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" ||
+                        script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {  //Others
+            script.onload = function(){
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    function pageLoadedHandler() {
+       
+        _politeLoad([
+            'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js',
+            'script.js'
+        ], function() {
+            console.log('init');
+            init();
+
+        });
+
+    
+    }
+    </script>
+
+</head>
+<body onload="pageLoadedHandler();">
+
+	<video id="video" width="1300" src="video/we-are-the-brave.mp4">
+	</video>
+
+	<div id="long"></div>
+</body>
+</html>
