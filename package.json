@@ -1,11 +1,13 @@
 {
-  "name": "scroll-video",
+  "name": "html-animation-boilerplate",
   "version": "1.0.0",
-  "description": "Scrollbar linked to video frames",
+  "description": "Simple boilerplate for developing GSAP/CSS3 animations. With livereload server, polite loading and SASS preprocessing.",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-connect": "^3.2.0",
     "gulp-open": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "run-sequence": "^1.1.2"
   },
   "dependencies": {}

@@ -5,11 +5,21 @@ const gutil = require('gulp-util');
 const connect = require('gulp-connect');
 const open = require('gulp-open');
 const runSequence = require('run-sequence');
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
 
 // read in the package file
 const pkg = require('./package.json');
 
 
+gulp.task('sass:dev', function() {
+    return gulp.src('dev/style.scss')
+        .pipe(sass({
+            outputStyle: "expanded"
+        }).on('error', sass.logError))
+        .pipe(rename('style.css'))
+        .pipe(gulp.dest('dev'));
+});
 
 gulp.task('connect', function() {
     connect.server({
@@ -33,9 +43,21 @@ gulp.task('open', function() {
         .pipe(open(options));
 });
 
+gulp.task('reload', function() {
+    runSequence('sass:dev', 'basic-reload');
+});
+
+gulp.task('basic-reload', function() {
+    gulp.src('dev')
+        .pipe(connect.reload());
+});
+
+gulp.task('watch', function() {
+    gulp.watch(['dev/*.html', 'dev/*.js', 'dev/*.scss'], ['reload']);
+});
 
 gulp.task('serve', function(callback) {
-    runSequence(['connect'], ['open'],
+    runSequence('sass:dev', ['connect'], ['open','watch'],
         callback);
 });
 
