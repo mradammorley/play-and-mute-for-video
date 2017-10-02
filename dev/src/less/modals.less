@@ -1,0 +1,211 @@
+// The MIT License (MIT)
+//
+// Copyright (c) 2011-2014 Webcomm Pty Ltd
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
+@import "@{bootstrap-path}/modals.less";
+
+// Fix Bootstrap's dumb behaviour
+.modal-open {
+    overflow: hidden;
+
+    // Bootstrap is stupid, adds a margin
+    // because some browsers have a scrollbar.
+    body&,
+    .navbar-fixed-top,
+    .navbar-fixed-bottom {
+        margin-right: 0;
+    }
+}
+
+//Custom Styles
+.modal{
+    .close{
+        opacity: 1;
+    }
+}
+
+.modal-header{
+    border:none;
+}
+
+.modal-content{
+    border:none;
+    box-shadow: 0 30px 75px 0 rgba(0, 0, 0, 0.15);
+}
+.modal-backdrop.in{
+    opacity: 0.1;
+}
+
+@media screen and (min-width: @screen-md) {
+
+    .modal-media .modal-dialog {
+         width: 940px;
+     }
+
+}
+
+.lightboxWrapper {
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index:100;
+
+    .lightbox {
+        background: #fff;
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        .transform(translate(-50%, -50%));
+
+
+      .close-button {
+          position:absolute;
+          right:10px;
+          top:5px;
+          z-index:150;
+          display:inline-block;
+          cursor: pointer;
+      }
+
+      .icon16 {
+          width:16px;
+          height:16px;
+      }
+  }
+
+
+}
+
+.modal {
+
+
+    .lightbox-body {
+      height:650px;
+
+      .row {
+        height:100%;
+      }
+    }
+
+
+    .livestream {
+
+        background:black;
+        width: 830px;
+        padding: 0 40px;
+
+        .lightbox-body {
+            width:750px;
+            height:500px;
+        }
+
+
+    }
+
+    @media screen and (max-width: @screen-sm-max) {
+        .lightbox {
+            width:100%;
+            height:100%;
+
+            .close-button {
+                position: relative;
+                width:100%;
+                text-align: right;
+                height:32px;
+            }
+        }
+
+        .lightbox-body {
+            height:100%;
+        }
+
+        .livestream {
+            width:100%;
+            padding:0;
+
+            .lightbox-body {
+                width:100%;
+                height:~'calc(100% - 32px)';
+            }
+
+
+
+        }
+    }
+
+    .imagewrapper {
+        position: relative;
+        display:inline-block;
+        .tick {
+            position:absolute;
+            bottom:20px;
+            right:15px;
+        }
+    }
+
+    .headlines {
+        padding-bottom:9em;
+    }
+
+
+    .text-block {
+        .align-vertical-middle;
+    }
+
+    .toptitle {
+        font-size:4em;
+    }
+
+    .caption {
+        width:auto;
+    }
+
+    .center-block {
+        float:none;
+    }
+
+    .buttons {
+        bottom: 80px;
+        margin:0;
+        padding-top:6em;
+        position:absolute;
+        width: calc(~'100% - 30px');
+
+        .btn {
+            margin:0;
+        }
+
+        .singleButton {
+            width:66%;
+            margin:15px 0;
+
+            @media screen and (min-width: @screen-md) {
+                margin:0;
+            }
+        }
+
+  }
+
+
+}

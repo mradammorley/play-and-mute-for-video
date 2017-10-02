@@ -55,13 +55,14 @@ gulp.task('open', function() {
         .pipe(open(options));
 });
 
-gulp.task('reload', function() {
-    runSequence('sass:dev','less', 'basic-reload');
-});
 
 gulp.task('basic-reload', function() {
     gulp.src('dev')
         .pipe(connect.reload());
+});
+
+gulp.task('reload', function() {
+    runSequence('less', 'basic-reload');
 });
 
 gulp.task('watch', function() {
@@ -74,6 +75,11 @@ gulp.task('serve', function(callback) {
 });
 
 // Uncomment this to use scss instead of less
+
+// gulp.task('reload', function() {
+//     runSequence('sass:dev', 'basic-reload');
+// });
+
 // gulp.task('watch', function() {
 //     gulp.watch(['dev/*.html', 'dev/*.js', 'dev/**/*.scss'], ['reload']);
 // });

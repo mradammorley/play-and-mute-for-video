@@ -1,0 +1,563 @@
+// Guidance Centre Pages.
+
+.expert-advice {
+    #body {
+        background-color: @light-grey;
+        padding-bottom: 80px;
+    }
+    .expertAdviceHeader {
+        background-color:@black;
+        padding: 40px 0 20px;
+        width:100%;
+        .breakpoint-sm({
+            display: none;
+        });
+        .mainHeading {
+            .font-heading;
+            font-size: 120px;
+            line-height: 120px;
+            color:@white;
+            text-align: center;
+            span {
+                font-size: 50px;
+                line-height: 50px;
+                display: inherit;
+            }
+        }
+    }
+    .block.block-layered-nav {
+        margin: 0;
+        box-shadow: none;
+        .navHead {
+            .font-heading;
+            text-align: left;
+            font-size: 30px;
+            line-height: 30px;
+            color:@black;
+            margin-bottom: 40px;
+        }
+        h2 {
+            padding: 0;
+            background-color: transparent;
+            margin-bottom: 0;
+            position: relative;
+        }
+    }
+    .block {
+        border:none;
+        background-color: transparent;
+        border-radius: 4px;
+    }
+    .expertAdviceSubMenu {
+        background-color:@black;
+        width:100%;
+        margin:0 0 100px;
+        .breakpoint-xs({
+            margin-bottom: 50px;
+        });
+
+        .expertAdviceSubMenuItem {
+            .smallGrey;
+            float:left;
+            min-width: 65px;
+            color: #ffffff;
+            margin: 0 20px 0 0;
+            text-align: center;
+            padding: 15px 0 15px;
+            border-bottom:4px solid @black;
+            opacity: 0.3;
+            &:hover, &.active {
+                border-color: @white;
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.cms-glossary {
+        .expertAdviceSubMenu {
+            .breakpoint-sm({
+            margin-bottom: 0;
+            });
+        }
+    }
+    .item {
+        background-color: @white;
+        padding: 0 50px 0 0;
+        margin-bottom: 30px;
+        min-height: 150px;
+        font-family: @font-family;
+
+        .breakpoint-sm({
+            padding:0;
+        float: left;
+        min-height: 150px;
+
+        });
+
+        .card-info{
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            h2 {
+                font-family: @font-family;
+                font-size: 20px;
+                max-width: 100%;
+                line-height: 32px;
+                margin:10px 0 20px;                
+            }
+            .breakpoint-sm({
+                width: 100%;
+                float: left;
+                padding:40px 40px 0 40px;
+
+            })
+        };
+
+
+        &.col-md-12 {
+            .smallGrey {
+                margin-top:90px;
+                .breakpoint-sm({
+                    margin-top: 0px;
+                });
+            }
+        }
+        &.col-md-6 {
+            padding:40px 40px 0 40px;
+            width:48%;
+
+            .card-info{
+                padding: 0;
+            }
+            .breakpoint-sm({
+                width: 100%;
+            });
+        }
+        h2 {
+            text-align: left;
+            text-transform: none;
+            margin: 10px 0 20px 0;
+            font-size: 20px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        a.link {
+            margin:0 18px 0 0;
+            float: left;
+        }
+        img {
+            float: left;
+            margin-right:60px;
+            width:295px;
+
+            .breakpoint-sm({
+                display: block;
+                margin: 50px auto 0 auto;
+                float: none;
+            });
+
+            .breakpoint-xs({
+            margin-top: 0;
+                width: 100%;
+            })
+        }
+    }
+    #gc-nav {
+        border-right:1px solid @border-color-input;
+        border-radius: 0;
+        a {
+            text-decoration: none;
+            &:hover {
+                color:@black;
+                opacity:1;
+            }
+        }
+    }
+    .expert-advice-content {
+        h1 {
+            font-family: @font-akkordeonsix;
+            text-align: left;
+            font-size: 100px;
+            margin-bottom: 50px;
+            max-width: 650px;
+            line-height: 0.9em;
+        }
+        h2, h3 {
+            font-family: @font-akkordeonsix;
+            text-align: left;
+            font-size: 50px;
+            max-width: 650px;
+            line-height: 0.9em;
+            margin: 50px 0 10px;
+        }
+        p {
+            max-width: 650px;
+            margin-bottom: 20px;
+            img {
+                margin-top: 20px;        
+                margin-bottom: 20px;
+            }
+        }
+        a {
+            text-decoration: underline;
+        }
+        .page-title {
+            display: block !important;
+            padding:0;
+            margin:0;
+            border:none;
+        }
+        ul {
+            max-width: 650px;
+        }
+    }    
+}
+
+// finance section
+.about-finance {
+    padding: 15px;
+
+    h4 {
+        text-align: left;
+        font-size: 1.5em;
+        line-height: 30px;
+        color: #000000;
+        opacity: 1;
+    }
+
+    div {
+        margin-bottom: 20px;
+    }
+}
+
+.finance-section {
+    h1 {
+        font-family: @font-akkordeonsix;
+        font-size: 100px;
+        margin-bottom: 50px;
+        line-height: 0.9em;
+    }
+    h2, h3 {
+        font-family: @font-akkordeonsix;
+        text-align: left;
+        font-size: 50px;
+        line-height: 0.9em;
+        margin: 50px 0 10px;
+    }
+}
+
+
+.cms-page-view .block-layered-nav ul.accordion {
+    margin:0;
+    border:none;
+    li h4 {
+        position: relative;
+        padding: 0;
+        border:none;
+        cursor: pointer;
+        font-size: .9em;
+        font-weight: normal;
+        text-transform: none;
+        text-align: left;
+        margin-bottom: 10px !important;
+        color: @warm-grey !important;
+    }
+}
+#faq-accordion li h4 {
+    .font-heading;
+    text-align: left;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    opacity: 1;
+    margin: 50px 0 20px;
+    padding: 0;
+    &.first {
+        margin-top:0;
+    }
+}
+ul.accordion#faq-accordion li div.accordion-content h3 {
+    text-align: left;
+    text-transform: none;
+    margin:0;
+    font-size:@body-size;
+    line-height:@body-line-height;
+    letter-spacing: 0.2px;
+    font-family: @font-family;
+    font-weight: 400;
+}
+.accordion-outer {
+    background-color: @white;
+    padding:20px 30px;
+    margin-bottom:10px;
+    position: relative;
+    ul {
+        margin-top: 10px;
+        font-weight: 300;
+        li {
+            margin-bottom: 10px;
+        }
+    }
+    .plusMinusIcon {
+        background:url('../images/icons/plus.svg') center center no-repeat;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top:28px;
+        right:30px;
+    }
+}
+ul.accordion li div.accordion-content {
+    display: block;
+    margin: 0px;
+    padding: 0;
+    p {
+        margin-top: 0;
+        font-weight: 300;
+        font-size:@body-size;
+        line-height:28px;
+        margin: 20px 0 0;
+        letter-spacing: 0.2px;
+    }
+}
+.cms-page-view ul.accordion li h4 a {
+    font-weight: 400;
+    text-decoration: none;
+}
+.cms-page-view .block-layered-nav ul.accordion li h4::after {
+    display: none;
+}
+
+.glossary-outer {
+    h2 {
+        text-align: left;
+        background-color: @black;
+        width: 110px;
+        color: @white;
+        .font-heading;
+        font-size: 100px;
+        line-height: 100px;
+        margin: 0;
+        padding:10px 15px;
+
+        .breakpoint-sm({
+            display: none;
+        })
+    }
+    h4, .glossary-index li {
+        .font-heading;
+        text-align: left;
+        font-size: 30px;
+        line-height: 30px;
+        color: #000000;
+        opacity: 1;
+    }
+    .col-md-4 {
+        min-height: 300px;
+        .breakpoint-sm({
+            min-height: 0;
+        margin-bottom: 50px;
+        });
+    }
+
+    > a, > a:hover, > a:link, > a:active {
+       text-decoration: none;
+    }
+
+    #glossary-index-wrapper {
+        opacity: 0.05;
+        margin-bottom: 40px;
+
+        &.visible{
+            opacity: 1;
+            transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+        };
+
+        padding: 0 0 38px;
+        .breakpoint-sm({
+            background-color: @white;
+            width: 100%;
+            overflow: scroll;
+            padding: 11px 0 14px 0;
+        });
+    }
+
+    .glossary-index {
+        text-align: justify;
+        margin: 0;
+        .breakpoint-sm({
+            min-width: 800px;
+            padding-top:5px;
+        });
+        li {
+            font-family: @font-family;
+            font-size: 24px;
+            text-transform: capitalize;
+            display: inline-block;
+            opacity: 0.2;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+        li:hover {
+            transform: scale(1.5);
+        }
+
+        .selected {
+            opacity: 1;
+            font-size: 4em;
+            padding: 0 44.9px;
+        }
+
+        &:after {
+            display: inline-block;
+            width: 100%;
+            content: ' ';
+            text-decoration: none;
+        }
+    }
+
+    div[id^='content-'] {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.boxPadding() {
+    height:250px;
+    padding:25px 35px;
+}
+
+.boxTitleLarge {
+    color:@black;
+    text-align:left;
+}
+
+.boxTitle {
+    color:@black;
+    font-size:@body-size;
+    line-height:@body-line-height;
+    text-align:left;
+    text-transform:none;
+    font-weight: 700;
+    margin: 0;
+}
+
+.shapePicker .col-md-1, .shapePicker .col-xs-1 {
+    padding:0;
+}
+
+// CSS brought across from inline CSS
+
+.vgc2 {
+    background:url('../images/gc/gc2.jpg') no-repeat right bottom transparent;
+    .boxPadding
+}
+
+.vgc3 {
+    background:url('../images/gc/bguides.jpg') no-repeat right bottom transparent;
+    .boxPadding
+}
+
+.vgc5 {
+    background:url('../images/gc/metals.jpg') no-repeat center bottom transparent;
+    .boxPadding
+}
+
+.vgc6 {
+    background:url('../images/gc/gifts.jpg') no-repeat center bottom transparent;
+    .boxPadding
+}
+
+.vgc7 {
+    background:url('../images/gc/care.jpg') no-repeat center bottom transparent;
+    .boxPadding
+}
+
+.vgc8 {
+    background:url('../images/gc/choose.jpg') no-repeat center bottom transparent;
+    .boxPadding
+}
+
+#whybuy .row {
+    margin-top: 0;
+}
+
+.list-override .arrow-list {
+    margin-left: 5px;
+}
+
+.guidanceshape a {
+    display:block; 
+    height:161px;
+    width:210px;
+}
+#storeAddress, #personalServiceCard {
+    margin:100px 0;
+}
+.boutiqueBox {
+    padding: 10px 0 30px;
+}
+.boutiqueAccordion {
+    margin:60px 0 120px;
+}
+.accordionOuter {
+    border-top:1px solid @border-color;
+    border-right:1px solid @border-color;
+    border-left:1px solid @border-color;
+    padding: 30px;
+    &:last-child {
+        border:1px solid @border-color;
+    }
+}
+.accordionTitle {
+    font-weight: 700;
+    cursor: pointer;
+}
+.accordionContent {
+    margin-top:20px;
+}
+.mapOverlay {
+    background: transparent;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    top: 400px;
+    margin-top: -400px;
+}
+
+.cms-page-view .block-layered-nav ul.accordion li div.accordion-content {
+    padding:0 0 15px;
+}
+
+@media (max-width: 991px) {
+    .cms-terms-and-conditions .expert-advice h1, .cms-finance .expert-advice h1 {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .expert-advice {
+        #gc-nav {
+            border:none;
+        }
+        .expert-advice-content h1 {
+            font-size: 60px;
+            margin: 30px 0 50px;
+        }
+        .item .card-info, .item.col-md-6 {
+            padding: 20px 20px 0 20px;
+        }
+    }
+}

@@ -1,0 +1,749 @@
+// The MIT License (MIT)
+//
+// Copyright (c) 2011-2014 Webcomm Pty Ltd
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
+// Do not compile styles
+
+
+.catalog-product-view {
+
+
+    @media (max-width: 350px) {
+
+        div.ui-dialog.ui-widget {
+            padding:0 !important;
+        }
+    }
+
+}
+
+.productPageh3() {
+    font-size: 2em;
+    letter-spacing: 1.7px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.toolTip() {
+    background-color: @white;
+    position: absolute;
+    z-index: 10;
+    width: 210px;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 10px 44px 0 rgba(0, 0, 0, 0.12);
+    margin:0 auto;
+}
+
+// Product Page Styles
+
+#productDetails {
+    padding: 80px 0;
+    h3 {
+        .productPageh3;
+        margin-bottom: 40px;
+    }
+
+    .description {
+        margin-top:10px;
+    }
+
+    .product-side-background-ring {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        overflow: hidden;
+        img {
+            position: relative;
+            right: -150px;
+        }
+        .breakpoint-md({
+            opacity:0.5;
+        });
+        .breakpoint-sm({
+            display: none;
+        })
+    }
+}
+table.data-specs {
+    width: 100%;
+}
+.productName {
+    .font-heading;
+    margin-bottom:10px;
+    font-size: 50px;
+    line-height: 76px;
+}
+.productPage {
+    #body& p {
+        //color: @black;
+    }
+    .title {
+        margin-bottom:10px;
+    }
+    table.data-specs {
+        td {
+          padding: 7px;
+          padding-left: 0;
+        }
+        a {
+            text-decoration: none !important;
+            cursor: pointer;
+        }
+
+        a:link, a:hover, a:active {
+            text-decoration: none;
+            cursor: default;
+
+        }
+    }
+    .full-details {
+        background-color:transparent;
+        background-image: none;
+        .tab-content ul {
+            background-color: transparent;
+        }
+    }
+    #body& article {
+        margin-top: 10px;
+    }
+    ul.details_thumbs li a img:hover, ul.details_thumbs li a.active img {
+        border: 1px solid @black !important;
+    }
+
+
+
+    .nav-dot-wrapper {
+        display: none;
+        .breakpoint-sm({
+            display: block;
+            margin-top: 5px;
+            position: relative;
+            left: 0;
+            right: 0;
+            text-align: center;
+        });
+        .nav-dot {
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            margin: 0 5px;
+            background-color: #cacaca;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+        }
+
+        .nav-dot.active,
+        .nav-dot.first,
+        .nav-dot:hover {
+            background-color: @black;
+        }
+    }
+    .more-views {
+        padding-left: 0;
+    }
+}
+.product-add-to-block {
+    padding: 0;
+    margin: 0 0 30px 0;
+    //.productFavourite, .productFavouriteToolTip { may need to restore this
+    //    display: none;
+    //}
+}
+
+//Image Gallery
+
+#product-media-load {
+    .details_thumbs {
+        width: 95px;
+
+        a:hover {
+            border:none !important;
+        }
+    }
+
+}
+
+#thumbs {
+    .thumbs-next, .thumbs-prev {
+        display: none !important;
+    }
+}
+
+#product_info {
+    padding-bottom: 0;    
+    .description {
+       text-align: left;
+    }
+}
+
+#engraving-terms {
+    ul {
+        padding:0;
+    }
+
+    li {
+        padding-bottom:10px;
+    }
+
+}
+
+.product_info_details {
+    background: url('../images/product/madeinlondon.png') top right no-repeat;
+    background-size: 60px 61px;
+
+
+    .option-wrapper {
+        display: inline-block;
+        width: 49%;
+
+        &.isSelected {
+            width:100%;
+        }
+
+        .select-option {
+            padding:10px;
+        }
+    }
+
+    .product-options {
+        dt {
+            float:none!important;
+        }
+    }
+    .input-box {
+        background: #fff url('../images/product/chevron.svg') no-repeat;
+        background-position: 90% center;
+        min-width: 140px;
+
+        .breakpoint-xs({
+            min-width: 135px;
+        });
+
+        select, .dk-selected {
+            padding: 0 30px 0 7px;
+
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 0;
+            text-overflow: '';
+            cursor: pointer;
+            background-color: transparent;
+            background-image: none;
+            min-width:100%;
+            border-radius: 0;
+            &::-ms-expand {
+                display: none;
+            }
+
+        }
+        .dk-selected {
+            padding: 10px 34px 10px 14px !important;
+            &::before, &::after {
+                display: none;
+            }
+        }
+        .dk-select-multi:focus .dk-select-options {
+            background-color: @black;
+            color: @white;
+            border-radius: 0;
+            max-height: 20em;
+        }
+        .dk-select-open-down .dk-select-options {
+            border-color: @black;
+            border-radius: 0;
+            .dk-option-highlight {
+                background-color: @black;
+                color: @white;
+            }
+        }
+    }
+}
+
+#product-options-wrapper .input-box {
+    background-image: none !important;
+}
+
+.price-box .price, .regular-price .price {
+    font-weight: 700;
+    color: @black;
+    float: left;
+    font-size: 15px;
+}
+.product-options, .product-pricing, .tier-prices, .well {
+    padding: 0px;
+    background-color: @white;
+    border: none;
+    border-radius: 0px;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+.more-views ul li img {
+    border: solid 1px @border-color;
+    margin-bottom: 10px;
+    width: 66px;
+}
+#madeToOrder {
+    padding:200px 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    background-color: @black;
+    margin-top:50px;
+    h3 {
+        .productPageh3;
+        color:@white;
+    }
+    p {
+        color:@white !important;
+    }
+    a {
+        color:@white;
+    }
+}
+.viewingButton {
+    min-width:100%;
+    margin:0;
+}
+.addToCartBtn {
+    min-width:100%;
+    margin:10px 0 0;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    span {
+        color:@black;
+    }
+    &:hover{
+        span{
+            color: @white;
+        }
+    }
+}
+.returnsNote, .insuredNote, .resizingNote, .orderNote {
+    margin-bottom:15px;
+    padding-left:40px;
+    min-height: 22px;
+}
+.returnsNote {
+    background: url('../images/product/returns.svg') left center no-repeat;
+    background-position:2px;
+    padding-top:2px;
+}
+.insuredNote {
+    background: url('../images/product/insured.svg') left center no-repeat;
+    background-position:3px 0;
+    padding-top:1px;
+}
+.resizingNote {
+    background: url('../images/product/resizing.svg') left center no-repeat;
+    background-position:5px 0;
+}
+.orderNote {
+    background: url('../images/product/delivery.svg') left center no-repeat;
+    background-position:0 1px;
+}
+.remaining-delivery-time {
+    color:@black;    
+}
+#ethicallySourced {
+    padding:100px 0;
+    h3 {
+        .productPageh3;
+    }
+}    
+.ethicallySourcedBg {
+    background:url('../images/product/placeholder-wings@2x.png') center center no-repeat;
+    min-height: 437px;
+    min-width:320px;
+    background-size:contain;
+}
+.ethicallySourcedText {
+    margin: 10% 0;
+}
+#perfectPair {
+    background-color:#f8f8f8;
+    padding:100px 0;
+    display: none; // currently hidden until we have perfect pair products
+    h3 {
+        .productPageh3;
+    }
+}
+.perfectPairBg {
+    background:url('../images/product/placeholder-perfectPairBg@2x.png') center center no-repeat;
+    min-height: 477px;
+    min-width:320px;
+    background-size:contain;
+}    
+.perfectPairThumbs {
+    margin:40px 0 10px;
+    img {
+        float: left;
+        margin:0 10px 10px 0;
+    }
+}    
+#recentlyCreated {
+    padding:120px 0 220px;
+    background:url('../images/product/placeholder-rings@2x.png') bottom center no-repeat;
+    background-size:contain;
+    h3 {
+        .productPageh3;
+        text-align: center;
+    }
+}    
+#chatToTeam {
+    padding:30px 0;
+    border-top:1px solid @border-color;
+    border-bottom:1px solid @border-color;
+
+    .link {
+        .breakpoint-xs({
+            display: inline-block;
+        })
+    }
+}
+.paymentOptions {
+    color:@warm-grey;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+}
+.sizeGuide {
+    border-top:1px solid @border-color;
+    border-bottom:1px solid @border-color;
+    padding:25px 0;
+    margin-bottom: 30px;
+}
+.sizeGuideTitle {
+    float: left;
+}
+.sizeGuideLink {
+    float: left;
+}
+.productHeartSocial {
+    margin:0 auto;
+    width:130px;
+}
+.productFavourite {
+    background: url('../images/product/circle-heart.svg') center center no-repeat;
+    height:60px;
+    width:60px;
+    cursor: pointer;
+    float: left;
+    &.liked {
+        background: url('../images/product/likedheart.svg') center center no-repeat;
+    }
+    &.superliked {
+        background: url('../images/product/superlikedheart.svg') center center no-repeat;
+    }
+}
+.productSocial {
+    background: url('../images/product/circle-share.svg') center center no-repeat;
+    height:60px;
+    width:60px;
+    cursor: pointer;
+    float: right;
+}
+.productSocialToolTip {
+    .toolTip;
+    bottom:77px;
+    left:70px;
+    right:0;
+    width:165px;
+    .facebookButton {
+        background: url('../images/product/facebook-icon.svg') center center no-repeat;
+        width:15px;
+        height:20px;
+        cursor: pointer;
+        float: left;
+        margin: 0 15px 0 30px;
+    }
+    .pinterestButton {
+        background: url('../images/product/pinterest-icon.svg') center center no-repeat;
+        width:15px;
+        height:20px;
+        cursor: pointer;
+        float: left;
+        margin: 0 15px;
+    }
+    .emailButton {
+        background: url('../images/product/email-icon.svg') center center no-repeat;
+        width:15px;
+        height:15px;
+        cursor: pointer;
+        float: left;
+        margin: 2px 30px 0 15px;
+    }
+}
+
+#mobileSocial{
+    display: none;
+    .breakpoint-sm({
+        display: block;
+        margin: 35px 0 27px;
+    })
+}
+
+.productFavouriteToolTip {
+    .toolTip;
+    bottom:77px;
+    left:-70px;
+    right:0;
+    &.loggedIn {
+        width: 140px;
+    }
+    .superLikedHeart {
+        background: url('../images/product/superlike.svg') no-repeat center center;
+        width:36px;
+        height:34px;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        cursor: pointer;
+    }
+    .liked {
+        background: url('../images/product/likedheart.svg') no-repeat center center;
+        width:36px;
+        height:34px;
+        display: inline-block;
+        margin: 0 10px 0 0;
+        cursor: pointer;
+    }
+    .brokenHeart {
+        background: url('../images/product/brokenheart.svg') no-repeat center center;
+        width:22px;
+        height:32px;
+        display: inline-block;
+        margin: 0 0 0 10px;
+        cursor: pointer;
+    }
+}
+.productToolTipArrow {
+    width: 100%;
+    height: 16px;
+    position: absolute;
+    bottom: -11px;
+    background: url('../images/header/arrowdown.svg') no-repeat bottom center;
+    z-index: 11;
+}
+.supportingLinks {
+    a {
+        margin-bottom: 22px;
+        cursor: pointer;
+        display: inline-block;
+    }
+}
+.visitBoutique {
+    background: url('../images/product/diamond.svg') left center no-repeat;
+    border-bottom:1px solid @border-color;
+    padding: 0 0 40px 80px;
+    margin: 0 0 36px;
+    a {
+        border-color:@black;
+    }
+}
+.trusted-shops {
+    width: 100%;
+    margin: 0 0 90px;
+    .trusted-details {
+        clear: none;
+        float: left;
+        margin-left: 10px;
+        a:hover {
+            text-decoration: none;
+        }
+        span {
+            color:@black;
+        }
+    }
+}
+.trusted-shops-inner {
+    width:100%;
+    margin:0 0 0 40px;
+}
+.goldStar {
+    background: url('../images/product/gold-star.svg') center center no-repeat;
+    width:10px;
+    height:9px;
+    float:left;
+    margin-top:5px;
+}
+.price-disclaimer {
+    display: none;
+}
+.description-content {
+    margin-bottom: 30px;
+}
+.mediaImages {
+    display: none;
+}
+.financeButton {
+    font-size:10px;
+    border:1px solid @border-color;
+    float: left;
+    width: 137px;
+    color: @warm-grey;
+    margin: 5px 0 0 10px;
+    padding: 2px 6px;
+    a {
+        text-decoration: none;
+    }
+}
+.availability.out-of-stock span {
+    color: @tangerine;
+}
+.inifinate-wrapper {
+    overflow: hidden;
+    width: 100vw;
+    position: relative;
+    margin-left: -50.5vw;
+    left: 50%;
+    #moments {
+        height:152px;
+        width: 10000%;
+        .breakpoint-sm({
+            height: 120px;
+        });
+        ul.neklo-inst-list {
+            li {
+                width: 154px;
+                margin: 0 3.1px;
+                .breakpoint-sm({
+                    width: 120px;
+                })
+            }
+            li:nth-child(1){
+                margin-left: 0;
+            };
+            li:nth-last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-md) {
+    .ethicallySourcedText {
+        margin: 15% 0 0 0;
+        padding: 0 0 0 50px;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    #madeToOrder {
+        padding: 70px 0 280px;
+        background-position: right bottom;
+        background-size: 600px auto;
+        text-align: center;
+        h3 {
+           text-align: center; 
+        }
+    }
+    .trusted-shops-inner {
+        margin:0 0 0 30px;
+    }
+    #productDetails {
+        background-image: none;
+        padding: 40px 0 45px;
+    }
+    .productFavouriteToolTip {
+        bottom:77px;
+    }
+    .visitBoutique {
+        background-position: right center;
+        padding: 30px 120px 30px 0;
+        margin: 30px 0 30px;
+        border-top: 1px solid @border-color;
+    }
+    #ethicallySourced {
+        padding:0 0 70px;
+        text-align: center;
+        h3 {
+            text-align: center;
+        }
+    }
+    .ethicallySourcedBg {
+        min-height: 250px;
+        min-width: inherit;
+        margin: 30px 40px;
+    }
+    .ethicallySourcedText {
+        margin: 0;
+        padding: 0 20px;
+    }
+    #perfectPair {
+        padding: 70px 0 0;
+        text-align: center;
+        h3 {
+            text-align: center;
+        }
+    }
+    .mediaImages {
+        display: block;
+    }
+    #recentlyCreated {
+        padding: 70px 0 120px;
+    }
+    .product_info_details {
+        background-image:none;
+    }
+    .more-views {
+        display: none;
+    }
+    table.data-specs td:not(.smallGrey) {
+        text-align: right;
+    }
+    .desktopMediaImages {
+        display: none;
+    }
+    .productName {
+        margin: 60px 0 10px;
+        width:100%;
+        text-align: center;
+        font-size: 56px;
+        line-height: 56px;
+    }
+    .productPage .title {
+        text-align:center;
+    }
+    .price-box .price, .regular-price .price {
+        float: none;
+    }
+    .product-add-to-block .price-box {
+        float: left;
+        margin-left: 10px;
+    }
+    .perfectPairThumbs img {
+        float:none;
+    }
+    .product-add-to-block {
+        //.productFavourite {
+        //    margin: 0 auto 30px;
+        //    display: block;
+        //}
+        .productFavouriteToolTip {
+            display: block;
+        }
+    }
+    .mobilePriceCenter {
+        width: 210px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,258 @@
+
+.category-engagement-rings,
+.category-wedding-rings,
+.category-jewellery {
+
+	.breadcrumb-wrapper {
+		background:black;
+
+		a {
+			color:white !important;
+		}
+
+	}
+
+	.breadcrumbs {
+		maring-bottom:0;
+	}
+
+}
+
+.catalog-category-view {
+
+	#body {
+		padding-left:0;
+		padding-right:0;
+		background: url('/skin/frontend/default/vashi/images/products/diamonds-header.svg') no-repeat;
+		.breakpoint-sm({
+			background-size: 125%;
+			background-position: -76px 70px;
+		});
+		.breakpoint-xs({
+			background: url('/skin/frontend/default/vashi/images/products/diamond-header-mobile.jpg') no-repeat;
+			background-position: 0 52px;
+		background-size: 100%;
+		});
+	}
+
+	&.category-wedding-rings,
+	&.category-engagement-rings,
+	&.category-jewellery {
+		#body {
+			background: none;
+		}
+
+		.mobileFiltering {
+			display: none;
+		}
+	}
+}
+
+body[class*='categorypath-create-your-own-'] {
+	#body {
+		background: none;
+	}
+}
+
+.category-landing-page {
+
+	overflow:hidden;
+
+	.cms-section {
+		margin-top:10rem;
+	}
+
+	.cms-category-header {
+		height:475px;
+
+	}
+
+	.text-block {
+		.para {
+			font-size:@body-size;
+			margin-top:1.5rem;
+		}
+	}
+
+	@media(min-width: @screen-md-min) {
+		.cms-category-header {
+	        height:450px;
+	    }
+    }
+
+
+    .cms-category-header {
+
+    	.text-block {
+    		margin-top:10rem;
+    	}
+
+    	.buttons {
+    		margin-top:3rem;
+    	}
+    }
+
+	.text-center {
+		.image {
+			width:100%;
+			display:block;
+			margin:0 auto;
+			text-align:center;
+			img {
+				display:inline-block;
+			}
+		}
+
+	}
+
+	.slider {
+
+		&.slick-dotted {
+			margin-bottom: 0;
+			padding-bottom:40px;
+		}
+
+
+		.nav-buttons {
+			position: absolute;
+			left:0px ;
+			bottom:4rem;
+			user-select: none;
+			width: 100%;
+			text-align:center;
+
+			@media(min-width: @screen-md-min) {
+				text-align:left;
+			}
+		}
+
+		.nav-button {
+			display: inline-block;
+			width: 5rem;
+			height: 5rem;
+
+			& + .nav-button {
+				margin-left: 2rem;
+			}
+
+			cursor: pointer;
+
+			.image {
+				height: 100%;
+				width: 100%
+			}
+		}
+
+		.slick-dots {
+			bottom: 0;
+			left: 0;
+
+			@media(min-width: @screen-md-min) {
+				text-align:left;
+			}
+		}
+
+		.text-block {
+			padding-bottom:175px;
+		}
+
+		@media(min-width: @screen-md-min) {
+
+			.nav-buttons {
+				//bottom:0;
+			}
+
+			.text-block {
+				padding-bottom:150px;
+			}
+
+		}
+	}
+
+}
+
+.background-css {
+	background-position:center;
+	background-repeat:no-repeat;
+
+}
+
+.background-love {
+	.background-css;
+	background-image: url('/skin/frontend/default/vashi/images/backgrounds/love.png');
+	@media(max-width: @screen-xs-max) {
+		background-position-y: 2em;
+		background-size: 150%;
+	}
+}
+
+.background-yes {
+	.background-css;
+	background-image: url('/skin/frontend/default/vashi/images/backgrounds/yes.jpg');
+
+	@media(max-width: @screen-xs-max) {
+		background-position-y: 2em;
+
+	}
+}
+
+
+
+#headerimagesSlider {
+	text-align:center;
+}
+
+
+#headerimages {
+
+	.inner {
+		.caption {
+			padding-bottom:3rem;
+		}
+	}
+
+	.slide {
+		width:250px;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	cursor: pointer;
+
+
+}
+
+#brand-messages {
+
+	.toptitle {
+		font-family:lato;
+		font-size:2em;
+		line-height:1.5em;
+	}
+
+	@media(min-width: @screen-md-min) {
+		.slider {
+			text-align: left;
+		}
+	}
+}
+
+#iconoptionsSlider {
+
+	.text-wrapper {
+		text-align:center;
+	}
+
+	@media(max-width: @screen-sm-max) {
+		.slide {
+			margin-top: 3rem;
+		}
+	}
+}
+
+.category-hero-image {
+	display:none;
+}
+

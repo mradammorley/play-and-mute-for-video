@@ -1,0 +1,410 @@
+// Bookings
+
+.mobile-reservation {
+  display: none;
+  .breakpoint-sm({
+    display: block;
+  })
+}
+
+.desktop-reservation {
+  .breakpoint-sm ({
+    display: none;
+  })
+}
+
+.viewings-dialog-wrapper {
+
+  display: none;
+
+  #viewings-dialog {
+    visibility: visible;
+    padding: 0;
+  }
+}
+
+.ui-dialog {
+  padding: 0;
+  &.ui-dialog-content {
+    padding: 0;
+  }
+  > .ui-dialog-content {
+    padding: 0;
+  }
+}
+div.ui-dialog.ui-widget {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    padding: 40px 60px;
+    width: 900px !important;
+}
+.date-selection {
+  > #pick-time-scroll {
+    padding: 1%;
+  }
+  .date-times {
+    .breakpoint-sm({
+      border: none;
+    });
+
+    .breakpoint-xs({
+      border:none;
+    })
+  }
+}
+
+.viewings-dialog {
+  .viewings-modal {
+
+    [class*='col-'] {
+      padding: 0;
+    }
+    .moments-appointment {
+      height:auto;
+    }
+  }
+  .input-text {
+    margin: 0 auto 0.8em;
+    display: inline-block;
+    width: 100%;
+  }
+
+  #viewings-login-form {
+    margin: 0 auto;
+    float: none;
+  }
+
+  #login-content {
+
+  .remember-me {
+    &.login-content {
+      display: none;
+    }
+    label {
+      float: left;
+      padding-left: 5px;
+    }
+    .breakpoint-sm({ padding-left: 15%; })
+  }
+
+  .forgotten-pass {
+    .breakpoint-sm({ padding-left: 15%; });
+
+    .forgot-password {
+      float: right;
+      .breakpoint-sm({ float: left;});
+
+    }
+  }
+}
+
+  #date-time ,#store {
+    img {
+      margin: 0;
+    }
+  }
+
+  #date-time {
+    margin-bottom: 61px;
+  }
+
+  #store {
+    margin-bottom: 29px;
+  }
+
+  .line {
+    width: 20px;
+    height: 1px;
+    background-color: @black;
+    opacity: 0.2;
+    margin: 0 auto;
+    margin-bottom: 34px;
+  }
+
+  .appointment {
+    .appointment-details {
+      padding: 2%;
+    }
+  }
+
+}
+
+button.ui-button {
+  .ui-button-icon-primary {
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+}
+
+.ui-datepicker-header {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.28;
+    letter-spacing: 0.3px;
+}
+
+.ui-datepicker-title {
+    font-weight: 400;
+}
+
+.ui-datepicker {
+    width: 94% !important;
+    margin: 0 !important;
+    font-family: 'Lato', sans-serif;
+    float: left;
+    th {
+        .smallGrey;
+        font-family: 'Lato', sans-serif;
+    }
+    tbody td {
+        border: 1px solid @border-color;
+    }
+    tbody tr {
+        border-right: 1px solid @border-color !important;
+    }
+    table {
+        width: 100%;
+    }
+}
+
+.ui-datepicker-calendar {
+    .ui-state-default {
+        border: none !important;
+        box-shadow: none;
+    }
+    .ui-state-active { 
+        border: 1px solid @tangerine !important;
+        background-color: @white !important;
+        color: @black;
+        box-shadow: none;
+        font-weight: bold;
+    }
+    .ui-state-disabled {
+        border-color: @border-color;
+    }
+    .ui-datepicker-current-day {
+        border: none;
+        background-color: @white;
+    }
+    // .ui-datepicker-unselectable {
+    //     border-color: @white;
+    // }
+    .ui-datepicker-year {
+        display: none;
+    }
+}
+
+#viewings-calender-form {
+    margin: 0 auto;
+}
+
+.date-selection {
+    .date-times {
+        border: none;
+        table {
+            width: 220px;
+            height: 220px;
+        }
+        .time {
+            line-height: 36px;
+            background: #fff;
+            border: solid 1px @black;
+            height: 40px;
+            border-radius:20px;
+            cursor: pointer;
+            &:hover {
+                border-color: @tangerine;
+            }
+            label {
+                cursor: pointer;
+                font-size: 12px;
+                color: @black;
+                font-weight: normal;
+                &:hover{
+                    color: @black;
+                }
+            }
+        }
+        .selected {
+            text-shadow: none;
+            background-color: @white;
+            border-color: @tangerine;
+            font-weight: bold;
+            &:hover {
+                text-shadow: none;
+                background-color: @white;
+                border-color: @tangerine;
+            }
+            label{
+                color: @black;
+            }
+        }
+        .disabled {
+            opacity: 0.2;
+            &:hover {
+                background: @white;
+                color:@black;
+                border-color:@black;
+            }
+        }
+        input[type=radio] {
+            display: none;
+        }
+    }
+}
+
+.viewings-dialog {
+    .add-to-viewings-form {
+        width: 100%;
+        border-radius: 0px;
+        background-color: @black;
+        //opacity: 0.1;
+        margin-bottom: 20px;
+        color: @white;
+        font-size: 11px !important;
+    }
+    .viewings-intro h2 {
+        .font-heading;
+        margin: 0 0 20px;
+        font-size: 50px;
+        line-height: 50px;
+        color: @black;
+        // text-align: left;
+    }
+  #appointment-review {
+    padding-top: 30px;
+  }
+
+  .edit_booking, .postcode a {
+    text-decoration: underline;
+    color: @black;
+    margin-top: 12px;
+  }
+
+    #booked-product-img {
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      padding-bottom: 20px;
+      img {
+        width: 155px;
+      }
+    }
+
+  #booked-product-img-confirm-success {
+    img {
+      width: 155px
+    }
+  }
+
+  .made-by-you-text {
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7f7f7f;
+  }
+
+  .smallGrey {
+    text-transform: none;
+  }
+
+    .guadian-angel-block {
+        border-bottom: 1px solid @border-color;
+        padding-bottom: 45px;
+        margin-bottom: 40px;
+        .your-guadian-angel-image {
+            background:url('../images/booking/placeholder-liz-stone.png') center center no-repeat;
+            background-size: cover;
+            width: 72px;
+            height: 72px;
+            float: left;
+            text-align: left;
+            margin:0 20px 0 0;
+        }
+        .your-guadian-angel {
+            float: left;
+            text-align: left;
+            margin-top: 15px;
+            .your-guadian-angel-name {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .smallGrey {
+
+            }
+        }
+    }
+    .contactInterest {
+        border-top: 1px solid @border-color;
+        padding: 60px 0;
+        margin-top: 50px;
+        .col-md-6 {
+            padding:0 20px 0 0;
+        }
+    }
+    .preferedContactTitle, .interestTitle {
+        .smallGrey;
+        margin-bottom:20px;
+    }
+    .roundBtn {
+        background: #fff;
+        border: solid 1px @black;
+        height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 36px;
+        font-weight: normal;
+        &.selected {
+            border-color: @tangerine;
+            font-weight: bold;
+        }
+    }
+}
+
+.pick-time{
+    margin-top: 7px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+@media (max-width: @screen-sm) {
+    div.ui-dialog.ui-widget {
+        box-shadow: none;
+        padding: 30px !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: @screen-xs) {
+    div.ui-dialog.ui-widget {
+        padding: 30px !important;
+    }
+    .interestTitle {
+        margin-top: 40px;
+    }
+    .pick-time {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .viewings-dialog {
+        .contactInterest {
+            margin-top: 20px;
+            padding: 40px 0;
+        }
+        .guadian-angel-block {
+            margin-bottom: 20px;
+        }
+    }
+    .contactInterest {
+        .col-md-6 {
+            padding:0;
+        }
+    }
+    .ui-datepicker {
+        width: 100% !important;
+    }
+}

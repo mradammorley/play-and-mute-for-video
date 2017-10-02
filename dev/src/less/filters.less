@@ -1,0 +1,295 @@
+// Category Page Filters.
+
+.filterMenu {
+    border-top:1px solid @border-color;
+    padding:20px 0;
+    width: 100%;
+    position: relative;
+
+    .filterMenuInner {
+        padding: 0 15px;
+    }
+
+
+    .filterSetting, .filterDiamond, .filterMetal, .filterPrice, .filterGemType {
+        color:@black;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-left:40px;
+        cursor: pointer;
+        background: url('../images/product/filters/triangledown.svg') center right no-repeat;
+        padding: 0 12px 0 0;
+        background-size: 7px;
+    }
+    .smallGrey {
+        display: inline-block;
+        font-size: 11px;
+    }
+}
+#filters {
+    .gan-attribute {
+        width: 100%;
+        margin: 0 0 10px;
+            .ttip-container {
+            border:1px solid @border-color;
+            height: 50px;
+            font-size: 10px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            width: 100%;
+            .table {
+                background-color: @white;
+                    div {
+                    margin: 0;
+                    max-height: 50px;
+                    span {
+                        background: url('../images/product/chevronRight.svg') right center no-repeat;
+                        width: 70%;
+                        display: block;
+                        text-align: right;
+                        float: right;
+                        padding:0 35px 0 0;
+                        font-size: 10px;
+                        letter-spacing: 1px;
+                        color: @warm-grey;
+                        background-size: 6px;
+                        background-position: 94% center;
+                    }
+                    .filter-name {
+                        float: left;
+                        width: 30%;
+                        font-size: 10px;
+                        letter-spacing: 1px;
+                        color: @black;
+                        text-align: left;
+                        padding: 0 0 0 15px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }        
+            }
+        }
+    }
+    .filter-select {
+        display: none;
+    }
+    .filter-content .container-option {
+        padding: 5px;
+        .selection a img {
+            opacity: 0.4;
+        }
+        .selected {
+            border-color:@black !important;
+            opacity: 1;
+            a {
+                color:@black !important;
+                img {
+                    opacity:1;
+                }
+            }
+        }
+    }
+    .filterOuter {
+        padding: 30px 0 60px;
+        min-height: 255px;
+    }
+}
+.category-top-filters.col-md-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.category-top-filters {
+    background-color: @white;
+}
+
+.mobileFilteringOuter {
+    padding:0 25px;
+}
+
+.mobileFiltering {
+    background: url('../images/product/magGlass.svg') no-repeat;
+    background-position: 15px center;
+    height:50px;
+    border:1px solid @border-color;
+    display: table-cell;
+    vertical-align: middle;
+    width: 10%;
+    padding: 0 15px 0 45px;
+    cursor: pointer;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: @black;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    span {
+        background: url('../images/category/middot.svg') left center no-repeat;
+        background-size: 4px;
+        color: @warm-grey;
+        padding-left: 14px;
+        margin-left: 7px;
+    }
+}
+.applyFilterSection {
+    display: none;
+    .applyFilterClear {
+        width:48.5%;
+        background-color: @white;
+        color: @black;
+        text-align: center;
+        border: 1px solid @black;
+        float: left;
+        text-transform: uppercase;
+        padding:15px 0;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+    }
+    .applyFilter {
+        width: 48.5%;
+        background-color: @black;
+        text-align: center;
+        border: 1px solid @black;
+        float: right;
+        color: @white;
+        text-transform: uppercase;
+        padding:15px 0;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+    }
+}
+
+// Price Slider
+
+#narrow-by-list-left .gan-track {
+    left:-20px;
+    .ui-slider-range {
+        background-color: #000;
+        height: 3px;
+        // margin-left: 35px;
+        top: 25px;
+        position: relative;
+        &:before, &:after {
+            display: none;
+        }
+    }
+}
+
+.ui-slider {
+    .ui-slider-handle-left, .ui-slider-handle-right {
+        background-image: none !important;
+        -webkit-border-radius: 50% !important;
+        border-radius: 50% !important;
+        background-color: #fff !important;
+        height: 40px !important;
+        margin-top: 10px !important;
+        width: 40px !important;
+        border:1px solid #000 !important;
+    }
+    .ui-slider-handle-left {
+        margin-left: 0px;
+    }
+    .ui-slider-handle-right {
+        margin-left: 0px;
+    }
+}
+
+.gan-track-grey {
+        background: #EEECE7;
+        width: 100%;
+        height: 3px;
+        position: relative;
+        top: -3px;
+}
+
+.gan-track-values {
+    >input {
+        display: none;
+    }
+    .value-min {
+        position: absolute;
+        float: none;
+        top: -62px;
+        left: 15px;
+        font-size: 12px;
+        color: #CCC;
+    }
+}
+
+.ui-state-focus {
+    margin: 0 !important;
+}
+
+@media (min-width: @screen-sm) {
+    .mobileFiltering {
+        display: none;
+    }
+}
+
+@media (max-width: @screen-sm) {
+    #advancednavigation-filter-content-price-left .filterOuter .col-md-4 {
+        padding-top: 50%;
+    }
+    .filterMenu {
+        display: none;
+    }
+    .category-top-filters > #block-layered-nav-left {
+        display:none;
+        background-color: #ffffff;
+        padding: 0;
+        position: relative;
+        top: -50px;
+    }
+    #filters {
+        height:80vh;
+        margin:0 25px;
+        .filterOuter {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 60px;
+            text-align: center;
+            height: 100vh;
+            background: @white;
+            z-index: 20;
+            padding: 0 10px 150px;
+        }
+        .filterInner {
+            height:100%;
+            width:100%;
+            overflow:scroll;
+        }
+        .filter-content .container-option {
+            float: left;
+            width:50%;
+            .selection {
+                width: 100%;
+            }
+        }    
+    }
+    .applyFilterSection {
+        display: block;
+        position: fixed;
+        width: 100%;
+        padding: 15px;
+        bottom: 0;
+        z-index: 20;
+        background: @white;
+        left: 0;
+    }
+    #narrow-by-list-left .gan-track-values {
+        margin:0 auto !important;
+        width:100% !important;
+    }
+    body.mob .gan-track-values {
+        width:100%;
+    }
+    #advancednavigation-filter-content-price-left .filterOuter {
+        padding: 0 30px;
+    }
+}

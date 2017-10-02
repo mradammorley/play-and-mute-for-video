@@ -1,0 +1,393 @@
+//
+// CATEGORY PAGES
+//
+
+//LANDING PAGES
+
+/* Top 4 blocks */
+
+
+.banner {
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    padding:0;
+    &.engagement-rings, &.wedding-rings {
+        background-image: url('../images/category/engagement-rings/engagement-rings-bg.png');
+    }
+    &.diamond-ring {
+        background-image: url('../images/category/engagement-rings/engagement-rings-diamond-bg.png');
+    }
+    &.vashi-diamond {
+        background-image: url('../images/category/create-your-own/cyo-diamond-unique-bg.png');
+    }
+    &.bestselling {
+        background-image: url('../images/category/engagement-rings/engagement-rings-bestseller-bg.png');
+    }
+    &.plain-wedding-bands {
+        background-image: url('../images/category//wedding-rings/wedding-rings-plain-bg.png');
+    }
+    &.bestselling-her {
+        background-image: url('../images/category/wedding-rings/wedding-rings-bestselling-her-bg.jpg');
+    }
+    &.our-ring-collection {
+        background-image: url('../images/category/jewellery-home/our-ring-collection.jpg');
+    }
+    &.our-earring-collection {
+        background-image: url('../images/category/jewellery-home/our-earring-collection.jpg');
+    }
+    &.our-pendant-collection {
+        background-image: url('../images/category/jewellery-home/our-pendant-collection.jpg');
+    }
+    &.our-bracelet-collection {
+        background-image: url('../images/category/jewellery-home/our-bracelet-collection.jpg');
+    }
+    &.engagement-ring {
+        background-image: url('../images/category/create-your-own/cyo-engagement-ring-bg.png');
+    }
+    &.earrings {
+        background-image: url('../images/category/create-your-own/cyo-earrings-bg.png');
+    }
+    &.pendant {
+        background-image: url('../images/category/create-your-own/cyo-pendant-bg.png');
+    }
+
+    article {
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.4);
+        display: flex;
+        justify-content: flex-end;
+        min-height: 410px;
+        padding: 0 2em;
+    }
+    .description {
+        max-width: 50%;
+        .breakpoint-md( {
+            max-width: 100%;
+            width: 100%;
+        });
+    }
+}
+
+/* Browse our handpicked collection */
+
+.category-links {
+    background: @light-grey;
+    margin: 32px 0;
+    padding: 16px 32px;
+    .breakpoint-xs( {
+        padding: 16px 12px;
+    }
+    );
+    >h2 {
+        position: relative;
+        &:before,
+        &:after {
+            border-top: 1px solid @warm-grey;
+            display: block;
+            height: 1px;
+            content: " ";
+            width: 30%;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            .breakpoint-md( {
+                border: none;
+            }
+            );
+        }
+        &:after {
+            right: 0;
+            left:auto;
+        }
+    }
+    .link-block {
+        background: @white;
+        box-shadow: 2px 2px 3px @warm-grey;
+        margin: 20px 0 40px 0;
+        padding: 24px 32px;
+        .breakpoint-xs( {
+            padding: 24px 12px;
+        }
+        );
+    }
+    .links-list {
+        overflow: hidden;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            max-width: 730px;
+            overflow: hidden;
+        }
+        img {
+            max-width: 180px;
+        }
+    }
+}
+
+
+/* Achievements */
+
+.diamonds-treasured{
+    margin-top:@s*6;
+}
+
+.achievements {
+    img {
+        margin: 40px 0;
+    }
+}
+
+
+/* Vashi Blog */
+
+.prod-listing {
+
+    .category-products {
+        #category-pages {
+            .blog-latest {
+                display: none;
+            }
+        }
+    }
+
+}
+
+
+.blog-latest {
+    background: @light-grey;
+    margin-top:@s*6;
+    padding: 2em;
+    .first-row {
+        font-style: italic;
+        font-weight: 700;
+    }
+    .blogpost-content {
+        p {
+            display: inline;
+        }
+    }
+    .col-md-4 {
+        border-right: 2px solid @warm-grey;
+        .breakpoint-md( {
+            border: none;
+        }
+        );
+    }
+    .category-landing-page {
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    .blog-image {
+        margin-bottom: 40px;
+    }
+    .read-more {
+        font-weight: 700;
+    }
+    .item {
+        .breakpoint-md( {
+            text-align: center;
+        }
+        );
+    }
+}
+
+
+//CATEGORY GRID PAGES
+
+/* Framework */
+.prod-listing{
+    & > .row{
+        margin:0;
+    }
+}
+
+/* Hero */
+.category-hero{
+  min-height: 150px;
+  position: relative;
+  .breakpoint-md( {
+      min-height: 0;
+      margin-top:40px;
+  });
+
+    .breakpoint-xs({
+    min-height: 150px;
+    })
+}
+.category-hero-image{
+  bottom:0;
+  left:0;
+  opacity: 1;
+  position: absolute;
+  right:0;
+  .flex-center;
+}
+.category-hero-description{
+  position: relative;
+  left: 0;
+  margin:0 auto;
+  right: 0;
+  h1 {
+    margin:0;
+      .font-heading;
+    letter-spacing: 0;
+    font-size: 76px;
+    line-height: 76px;
+    }
+}
+
+//Product Grid
+.products-grid {
+    .btn-cart {
+        margin: 8px 0;
+    }
+    .add-to-links {
+        padding: 4px 0;
+        width: 100%;
+        li {
+            margin: 8px 0;
+            text-transform: uppercase;
+        }
+    }
+    .product-image {
+        img {
+            padding: 4px;
+            width: 70%;
+            .breakpoint-sm({
+                width: auto;
+            })
+        }
+    }
+
+    .promotional {
+        .breakpoint-sm({
+            padding-top: 20px;
+        })
+    }
+    .pricebox-price, .price-box, .regular-price .price, .product-price {
+        color: @tangerine;
+    }
+    .product-name, .price-box, .actions{
+        .product-grid;
+    }
+
+    .product-image {
+        .breakpoint-sm({
+            margin-bottom: 0;
+        })
+    }
+
+    .grid-item {
+        float: left;
+        margin-bottom: 20px;
+        min-height: 297px;
+        .breakpoint-sm({
+            min-height: 0;
+            height: auto;
+            margin-bottom: auto;
+        })
+    }
+
+    .grid-item-lower-feature {
+        img {
+            width: 90%;
+            .breakpoint-sm({
+                width: auto;
+            })
+        }
+    }
+
+    .grid-item--double-length {
+        .breakpoint-sm({
+            height: auto;
+            margin-top: 136px;
+        })
+    }
+    .grid-item--height2 {
+        height: 328px;
+        .breakpoint-sm({
+            margin-bottom: 150px;
+            margin-top: 100px;
+            width: 100%;
+            height: 390px;
+            padding: 0;
+        });
+
+        .breakpoint-md({
+            height: 369px;
+        });
+    }
+
+    .priority-one {
+        margin-bottom: 120px;
+        .breakpoint-sm({
+            margin-bottom: auto;
+        });
+        img {
+            width: 80%;
+            .breakpoint-sm({
+                width: @product-list-img-width;
+            })
+        }
+    }
+
+    .priority-two {
+        top: -100px;
+        .breakpoint-sm({
+            top:auto;
+        });
+        img {
+            width: 100%;
+            .breakpoint-sm({
+                width: @product-list-img-width;
+            })
+        }
+    }
+
+    .priority-three {
+        margin-top: -140px;
+        margin-bottom: 143px;
+        .breakpoint-sm({
+            margin-top: 0;
+            margin-bottom: 0;
+        });
+        img {
+            width: 70%;
+            .breakpoint-sm ({
+                width: @product-list-img-width;
+            })
+        }
+    }
+    
+    .product-info-box {
+        z-index: 1;
+    }
+    .priority-highest {
+        top: -140px;
+
+        &.not-ring {
+            top: -330px;
+        }
+        .breakpoint-sm({
+            top:auto;
+        });
+    }
+
+    .price-box {
+        .price {
+            width:100%;
+            color: @black;
+        }
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .category-hero-description{
+        h1 {
+            font-size: 56px;
+            line-height: 56px;
+        }
+    }    
+}
