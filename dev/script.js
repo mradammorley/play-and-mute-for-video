@@ -2,12 +2,12 @@ function init() {
   console.log('start animation');
 
   // store button and animation ids in vars
-  var muteButton = document.getElementById('mute-button');
-  var playButton = document.getElementById('play-button');
-  var playToPauseOne = document.getElementById('play-to-pause-one');
-  var pauseToPlayOne = document.getElementById('pause-to-play-one');
-  var playToPauseTwo = document.getElementById('play-to-pause-two');
-  var pauseToPlayTwo = document.getElementById('pause-to-play-two');
+  var muteButton = document.querySelector('.mute-button');
+  var playButton = document.querySelector('.play-button');
+  var playToPauseOne = document.querySelector('.play-to-pause-one');
+  var pauseToPlayOne = document.querySelector('.pause-to-play-one');
+  var playToPauseTwo = document.querySelector('.play-to-pause-two');
+  var pauseToPlayTwo = document.querySelector('.pause-to-play-two');
   // store state of button in var
   var playing = true;
 
