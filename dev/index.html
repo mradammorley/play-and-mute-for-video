@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>VASHI Brand Film Scroller</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Video Buttons</title>
+    <link rel="stylesheet" href="style.css">
 
-	 <script language="javascript">
+     <script language="javascript">
 
     function _politeLoad(urls, onComplete) {
         var l = urls.length,
@@ -84,16 +84,17 @@
                 <svg id="play-button-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
                 width="50" height="50" viewBox="0 0 214 214"
                 xml:space="preserveAspectRatio">
-                <!-- <polygon class='triangle' id="XMLID_18_" fill="rgba(255, 255, 255, 1)" points="73.5,62.5 148.5,105.8 73.5,149.1 "/> -->
+
+                  
 
                 <polygon points="142 108 67 151 67 64 142 108 142 108" fill="#fff">
-                <animate class="play-to-pause-one" begin="indefinite" fill="freeze" attributeName="points" dur="200ms" to="92 151 67 151 67 64 92 64 92 108" />
-                <animate class="pause-to-play-one" begin="indefinite" fill="freeze" attributeName="points" dur="200ms" to="142 108 67 151 67 64 142 108 142 108" />
+                <animate class="play-button-left" begin="indefinite" fill="freeze" attributeName="points" dur="200ms" from="142 108 67 151 67 64 142 108 142 108" to="92 151 67 151 67 64 92 64 92 108" />
+
                 </polygon>
 
-                <polygon points="142 108 67 151 67 64 142 108 142 108" fill="#fff">
-                <animate class="play-to-pause-two" begin="indefinite" fill="freeze" attributeName="points" dur="200ms" to="142 151 117 151 117 64 142 64 142 108" />
-                <animate class="pause-to-play-two" begin="indefinite" fill="freeze" attributeName="points" dur="200ms" to="142 108 67 151 67 64 142 108 142 108" />
+              <polygon points="142 108 67 151 67 64 142 108 142 108" fill="#fff">
+                <animate class="play-button-right" begin="indefinite" fill="freeze" attributeName="points" dur="200ms" from="142 108 67 151 67 64 142 108 142 108" to="142 151 117 151 117 64 142 64 142 108" />
+
                 </polygon>
 
                 <circle class='circle' id="XMLID_17_" fill="none"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
@@ -102,7 +103,6 @@
             </a>
             
         </div>
-
     </div>
 </body>
 </html>
