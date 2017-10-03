@@ -4,8 +4,10 @@ function init() {
   // store button and animation ids in vars
   var muteButton = document.getElementById('mute-button');
   var playButton = document.getElementById('play-button');
-  var playToPause = document.getElementById('play-to-pause');
-  var pauseToPlay = document.getElementById('pause-to-play');
+  var playToPauseOne = document.getElementById('play-to-pause-one');
+  var pauseToPlayOne = document.getElementById('pause-to-play-one');
+  var playToPauseTwo = document.getElementById('play-to-pause-two');
+  var pauseToPlayTwo = document.getElementById('pause-to-play-two');
   // store state of button in var
   var playing = true;
 
@@ -22,10 +24,12 @@ function init() {
   // toggle the state of the play button and tell relevant svg animation to begin
   function togglePlay() {
   	if (playing === true) {
-  		playToPause.beginElement();
+  		playToPauseOne.beginElement();  		
+  		playToPauseTwo.beginElement();
   		playing = false;
   	} else {
-  		pauseToPlay.beginElement();
+  		pauseToPlayOne.beginElement();
+  		pauseToPlayTwo.beginElement();
   		playing = true;
   	}
 

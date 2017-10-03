@@ -8,6 +8,11 @@
 .play-container {
   position: absolute;
   bottom: 20px;
+  left: 80px;
+}
+
+.mute-container {position: absolute;
+  bottom: 20px;
   left: 20px;
 }
 
@@ -75,13 +80,13 @@
 
   &--wave {
     position: absolute;
-    border: 7px solid transparent;
-    border-right: 7px solid #fff;
+    border: 2px solid transparent;
+    border-right: 2px solid #fff;
     border-radius: 50%;
     -webkit-transition: all 200ms;
     transition: all 200ms;
     margin: auto;
-    top: 0;
+    top: -4px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -101,17 +106,17 @@
     border-radius: 0;
     width: 50%;
     height: 50%;
-    border-width: 0 14px 0 0;
+    border-width: 0 4px 0 0;
 
     &_one {
 
-    -webkit-transform: rotate(45deg) translate3d(0, -25%, 0) scale(0.5);
-            transform: rotate(45deg) translate3d(0, -25%, 0) scale(0.5);
+    -webkit-transform: rotate(45deg) translate3d(0, -23%, 0) scale(0.5);
+            transform: rotate(45deg) translate3d(0, -23%, 0) scale(0.5);
     }
 
     &_two {
-      -webkit-transform: rotate(-45deg) translate3d(0, 25%, 0) scale(0.5);
-              transform: rotate(-45deg) translate3d(0, 25%, 0) scale(0.5);
+      -webkit-transform: rotate(-45deg) translate3d(0, 23%, 0) scale(0.5);
+              transform: rotate(-45deg) translate3d(0, 23%, 0) scale(0.5);
     }
   }
 }
